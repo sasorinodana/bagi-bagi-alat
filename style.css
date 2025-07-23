@@ -29,20 +29,25 @@ h1.kelap-kelip {
 }
 
 .carousel {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem auto;
 }
 
 .carousel img {
-  width: 100%;
-  max-width: 180px;
+  width: 300px;
   height: auto;
+  border: 4px solid #330000;
+  box-shadow: 0 0 12px #220000;
+  margin-bottom: 1rem;
 }
 
-
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
 .nav-btn {
   width: 0;
