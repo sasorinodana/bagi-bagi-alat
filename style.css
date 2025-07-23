@@ -46,20 +46,23 @@ h1.kelap-kelip {
   border-radius: 4px;
 }
 
-
-
 .nav-btn {
-  background-color: #330000;
-  color: #ddd;
-  border: 2px solid #550000;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  background: transparent;
   cursor: pointer;
-  transition: 0.2s;
 }
 
-.nav-btn:hover {
-  background-color: #550000;
-  color: #fff;
+#prevBtn {
+  border-width: 20px 28px 20px 0;
+  border-color: transparent #550000 transparent transparent;
+  margin-right: 12px;
 }
+
+#nextBtn {
+  border-width: 20px 0 20px 28px;
+  border-color: transparent transparent transparent #550000;
+}
+
 
