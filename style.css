@@ -1,10 +1,10 @@
 .kelap-kelip {
   animation: flicker 1.5s infinite;
-  color: #ff00ff;
+  color: #444444;
   text-shadow:
-    0 0 5px #ff00ff,
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff;
+    0 0 5px  #5C0000,
+    0 0 10px #8A0303,
+    0 0 20px #8A0303;
 }
 
 @keyframes flicker {
