@@ -27,3 +27,36 @@ h1.kelap-kelip {
     opacity: 0.2;
   }
 }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.carousel img {
+  width: 300px;
+  height: auto;
+  border: 3px solid #550000;
+  box-shadow: 0 0 10px #22000088;
+  background-color: #1a1a1a;
+  padding: 5px;
+}
+
+.nav-btn {
+  background-color: #330000;
+  color: #ddd;
+  border: 2px solid #550000;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #550000;
+  color: #fff;
+}
+
