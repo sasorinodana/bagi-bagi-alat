@@ -64,5 +64,27 @@ h1.kelap-kelip {
   border-width: 20px 0 20px 28px;
   border-color: transparent transparent transparent #550000;
 }
+.carousel-container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-images img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 
 
