@@ -1,17 +1,14 @@
 .kelap-kelip {
-  animation: flicker 1.5s infinite;
-  color: #444444;
-  text-shadow:
-    0 0 5px  #5C0000,
-    0 0 10px #8A0303,
-    0 0 20px #8A0303;
+  animation: blink 1s infinite;
+  color: red; /* bebas ubah warna */
 }
 
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+@keyframes blink {
+  0%, 100% {
     opacity: 1;
   }
-  20%, 22%, 24%, 55% {
+  50% {
     opacity: 0;
   }
 }
+
