@@ -120,6 +120,28 @@
 
   <div class="footer">
     <p>😼thank youu😼</p>
+    
   </div>
+  <script>
+  const imageList = [
+    "gambar1.png",
+    "gambar2.png",
+    "gambar3.png"
+  ];
+
+  let currentIndex = 0;
+  const imageElement = document.getElementById("carouselImage");
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+    imageElement.src = imageList[currentIndex];
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % imageList.length;
+    imageElement.src = imageList[currentIndex];
+  });
+</script>
+
 </body>
 </html>
