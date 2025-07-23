@@ -1,6 +1,6 @@
 .kelap-kelip {
   animation: blink 1s infinite;
-  color: red; /* bebas ubah warna */
+  color: #5C0000; /* bebas ubah warna */
 }
 
 @keyframes blink {
