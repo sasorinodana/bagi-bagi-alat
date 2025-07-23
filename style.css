@@ -1,13 +1,27 @@
-.kelap-kelip {
-  animation: blink 1s infinite;
-  color: #ff0000; /* bebas ubah warna */
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+h1.kelap-kelip {
+  font-family: 'Nosifer', cursive;
+  color: #8A0303; /* darah pekat */
+  font-size: 48px;
+  text-align: center;
+  animation: drip 2s infinite ease-in-out;
+}
+
+/* Efek darah netes */
+@keyframes drip {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
 }
