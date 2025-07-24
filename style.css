@@ -13,18 +13,31 @@ h1.kelap-kelip {
   text-align: center;
   font-size: 2rem;
   color: #aa0000;
-  animation: quickFlicker 1.2s infinite;
+  animation: horrorFlicker 3s infinite;
   text-shadow:
-    0 0 4px #330000,
-    0 0 8px #220000;
+    0 0 2px #440000,
+    0 0 5px #330000,
+    0 0 10px transparent;
 }
 
-@keyframes quickFlicker {
-  0%, 100% {
+@keyframes horrorFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     opacity: 1;
+    text-shadow:
+      0 0 2px #440000,
+      0 0 5px #330000;
   }
-  50% {
-    opacity: 0.2;
+  20%, 22%, 24%, 55% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+  70% {
+    opacity: 0.6;
+    text-shadow:
+      0 0 1px #220000;
+  }
+  80% {
+    opacity: 0.1;
   }
 }
 
