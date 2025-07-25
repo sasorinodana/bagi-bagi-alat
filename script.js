@@ -27,6 +27,27 @@ function spawnEnemy() {
   const enemyX = Math.random() * (canvas.width - 40);
   enemies.push({ x: enemyX, y: -40, width: 40, height: 40 });
 }
+let isTouching = false;
+let touchX = 0;
+
+canvas.addEventListener("touchstart", (e) => {
+  isTouching = true;
+  touchX = e.touches[0].clientX;
+});
+
+canvas.addEventListener("touchmove", (e) => {
+  if (isTouching) {
+    const currentX = e.touches[0].clientX;
+    const dx = currentX - touchX;
+    rocketX += dx;
+    touchX = currentX;
+  }
+});
+
+canvas.addEventListener("touchend", () => {
+  isTouching = false;
+});
+
 
 
 document.getElementById("shootBtn").addEventListener("click", shoot);
@@ -36,6 +57,9 @@ function shoot() {
 }
 
 function draw() {
+  if (rocketX < 0) rocketX = 0;
+  if (rocketX + rocketWidth > canvas.width) rocketX = canvas.width - rocketWidth;
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   // Gambar roket
