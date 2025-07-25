@@ -4,6 +4,10 @@ const ctx = canvas.getContext("2d");
 const rocketImg = new Image();
 rocketImg.src = "roketku.png";
 
+const enemyImg = new Image();
+enemyImg.src = "musuhku.png";
+
+
 let rocketX = canvas.width / 2 - 25;
 const rocketY = canvas.height - 80;
 const rocketWidth = 50;
@@ -16,6 +20,14 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") rocketX += 10;
   if (e.key === " ") shoot();
 });
+
+let enemies = [];
+
+function spawnEnemy() {
+  const enemyX = Math.random() * (canvas.width - 40);
+  enemies.push({ x: enemyX, y: -40, width: 40, height: 40 });
+}
+
 
 document.getElementById("shootBtn").addEventListener("click", shoot);
 
@@ -34,9 +46,27 @@ function draw() {
   bullets.forEach((b, i) => {
     ctx.fillRect(b.x, b.y, 5, 10);
     b.y -= 5;
-
-    // Hapus peluru yg keluar layar
     if (b.y < 0) bullets.splice(i, 1);
+  });
+
+  // Gambar musuh
+  enemies.forEach((e, ei) => {
+    ctx.drawImage(enemyImg, e.x, e.y, e.width, e.height);
+    e.y += 2;
+
+    // Cek tabrakan dengan peluru
+    bullets.forEach((b, bi) => {
+      if (
+        b.x < e.x + e.width &&
+        b.x + 5 > e.x &&
+        b.y < e.y + e.height &&
+        b.y + 10 > e.y
+      ) {
+        // Hapus musuh & peluru kalau kena
+        enemies.splice(ei, 1);
+        bullets.splice(bi, 1);
+      }
+    });
   });
 
   requestAnimationFrame(draw);
@@ -45,3 +75,6 @@ function draw() {
 rocketImg.onload = () => {
   draw();
 };
+
+setInterval(spawnEnemy, 2000);
+
