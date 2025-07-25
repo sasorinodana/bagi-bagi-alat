@@ -48,6 +48,10 @@ canvas.addEventListener("touchend", () => {
   isTouching = false;
 });
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
 
 
 document.getElementById("shootBtn").addEventListener("click", shoot);
