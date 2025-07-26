@@ -148,6 +148,29 @@
     imageElement.src = imageList[currentIndex];
   });
 </script>
+
+  <script>
+  const imageList = [
+    "1.PNG",
+    "2.PNG",
+    "3.PNG",
+    "4.PNG",
+    "5.PNG"
+  ];
+
+  let currentIndex = 0;
+  const imageElement = document.getElementById("carouselImage");
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+    imageElement.src = imageList[currentIndex];
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % imageList.length;
+    imageElement.src = imageList[currentIndex];
+  });
+</script>
       <script src="script.js"></script>
 
 
