@@ -79,6 +79,23 @@ h1.kelap-kelip {
   border-width: 20px 0 20px 28px;
   border-color: transparent transparent transparent #550000;
 }
+.nav-btn2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  background: transparent;
+  cursor: pointer;
+}
+
+#prevBtn2 {
+  border-width: 20px 28px 20px 0;
+  border-color: transparent #550000 transparent transparent;
+  margin-right: 12px;
+}
+#nextBtn2 {
+  border-width: 20px 0 20px 28px;
+  border-color: transparent transparent transparent #550000;
+}
 
 
 #gameCanvas {
