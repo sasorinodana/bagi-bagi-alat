@@ -113,7 +113,7 @@
   <p>yes</p>
 
   <div class="carousel">
-    <img id="carouselImage" src="1.png" alt="marxx" />
+    <img id="carouselImage2" src="1.png" alt="marxx" />
     <div class="carousel-buttons">
       <button class="nav-btn" id="prevBtn"></button>
       <button class="nav-btn" id="nextBtn"></button>
@@ -160,7 +160,7 @@
   ];
 
   let currentIndex = 0;
-  const imageElement = document.getElementById("carouselImage");
+  const imageElement = document.getElementById("carouselImage2");
 
   document.getElementById("prevBtn").addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
